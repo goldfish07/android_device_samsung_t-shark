@@ -37,3 +37,5 @@ BOARD_USES_SS_VOIP := true
 #Dither
 IMAGE_DITHER_ENABLE := true
 
+#Gralloc
+USE_SPRD_DITHER := true
