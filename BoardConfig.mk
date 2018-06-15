@@ -29,3 +29,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_PREBUILT_KERNEL := device/samsung/t-shark/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+#HW-Audio
+BOARD_USES_TINYALSA_AUDIO := true
+BOARD_USES_SS_VOIP := true
+
+
