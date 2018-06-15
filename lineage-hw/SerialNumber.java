@@ -23,6 +23,7 @@ import android.os.SystemProperties;
  * than ro.serialno, which may be different than the actual serial number
  * sticker on the hardware.
  */
+
 public class SerialNumber {
 
     /**
