@@ -114,4 +114,10 @@ BOARD_HAVE_SAMSUNG_WIFI := true
 
 #lineage-hw
 BOARD_HARDWARE_CLASS := device/samsung/t-shark/lineage-hw
+
+# Recovery
+BOARD_HAS_DOWNLOAD_MODE := true
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+BOARD_SUPPRESS_EMMC_WIPE := true
+TARGET_RECOVERY_FSTAB := device/samsung/t-shark/recovery.fstab
 ###########################################################################################
