@@ -3,11 +3,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/t-shark/t-shark-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/t_shark/t_shark-vendor.mk)
 
-DEVICE_PATH := device/samsung/t-shark
+DEVICE_PATH := device/samsung/t_shark
 
-DEVICE_PACKAGE_OVERLAYS += device/samsung/t-shark/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/t_shark/overlay
 
 # Hardware Features#################################################
 
@@ -231,5 +231,5 @@ $(call inherit-product, build/target/product/full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_t-shark
-PRODUCT_DEVICE := t-shark
+PRODUCT_NAME := full_t_shark
+PRODUCT_DEVICE := t_shark

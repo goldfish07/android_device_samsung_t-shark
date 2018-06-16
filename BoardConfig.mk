@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/t-shark/BoardConfigVendor.mk
+-include vendor/samsung/t_shark/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -19,7 +19,7 @@ BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_CONFIG := tshark_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/t-shark
+TARGET_KERNEL_SOURCE := kernel/samsung/t_shark
 
 
 #Partitions
@@ -66,12 +66,12 @@ COMMON_GLOBAL_CFLAGS += -DSPRD_HARDWARE
 ###########################################################################################
 
 # RIL
-BOARD_RIL_CLASS += ../../../device/samsung/t-shark/ril
+BOARD_RIL_CLASS += ../../../device/samsung/t_shark/ril
 COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t-shark/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/t-shark/bluetooth/libbt_vndcfg.txt
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t_shark/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/t_shark/bluetooth/libbt_vndcfg.txt
 
 #Android Features##########################################################################
 # Enable dex-preoptimization to speed up the first boot sequence
@@ -85,7 +85,7 @@ TARGET_PROVIDES_INIT_RC := true
 TARGET_NEEDS_PROP_INIT_HACK := true
 
 # SELinux
-BOARD_SEPOLICY_DIRS += device/samsung/t-shark/sepolicy
+BOARD_SEPOLICY_DIRS += device/samsung/t_shark/sepolicy
 
 # Charger
 BOARD_CHARGER_ENABLE_SUSPEND := true
@@ -113,11 +113,11 @@ WIFI_BAND := 802_11_ABG
 BOARD_HAVE_SAMSUNG_WIFI := true
 
 #lineage-hw
-BOARD_HARDWARE_CLASS := device/samsung/t-shark/lineage-hw
+BOARD_HARDWARE_CLASS := device/samsung/t_shark/lineage-hw
 
 # Recovery
 BOARD_HAS_DOWNLOAD_MODE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 BOARD_SUPPRESS_EMMC_WIPE := true
-TARGET_RECOVERY_FSTAB := device/samsung/t-shark/rootdir/fstab.sc8830
+TARGET_RECOVERY_FSTAB := device/samsung/t_shark/rootdir/fstab.sc8830
 ###########################################################################################

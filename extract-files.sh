@@ -3,7 +3,7 @@
 set -e
 
 export VENDOR=samsung
-export DEVICE=t-shark
+export DEVICE=t_shark
 
 function extract() {
     for FILE in `egrep -v '(^#|^$)' $1`; do
