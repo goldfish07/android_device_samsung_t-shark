@@ -39,13 +39,13 @@ import java.util.Collections;
  *
  * {@hide}
  */
-public class tshark extends SamsungSPRDRIL implements CommandsInterface {
+public class tSharkRil extends SamsungSPRDRIL implements CommandsInterface {
 
-    public tshark(Context context, int preferredNetworkType, int cdmaSubscription) {
+    public tSharkRil(Context context, int preferredNetworkType, int cdmaSubscription) {
         this(context, preferredNetworkType, cdmaSubscription, null);
     }
 
-    public tshark(Context context, int preferredNetworkType,
+    public tSharkRil(Context context, int preferredNetworkType,
             int cdmaSubscription, Integer instanceId) {
         super(context, preferredNetworkType, cdmaSubscription, instanceId);
     }
