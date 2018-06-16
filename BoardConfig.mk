@@ -56,6 +56,10 @@ USE_OVERLAY_COMPOSER_GPU := true
 #SPRD-bluetooth
 BOARD_HAVE_BLUETOOTH_SPRD := true
 TARGET_BOARD_SUPPORT_HW_ADC_ADAPT := FUCK_YEAH #don't change string
+
+# healthd
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.sc8830
+
 ###########################################################################################
 
 # RIL
@@ -86,3 +90,4 @@ BOARD_NO_CHARGER_LED := true
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 BACKLIGHT_PATH := /sys/class/backlight/panel/brightness
+
