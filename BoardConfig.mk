@@ -34,7 +34,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
-#Hardware Features#######################################################################
+#Hardware Features#######################################################################!
 #HW-Audio
 BOARD_USES_TINYALSA_AUDIO := true
 BOARD_USES_SS_VOIP := true
@@ -65,3 +65,9 @@ COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t-shark/bluetooth
 BOARD_BLUEDROID_VENDOR_CONF := device/samsung/t-shark/bluetooth/libbt_vndcfg.txt
+
+#Android Features##########################################################################
+# Enable dex-preoptimization to speed up the first boot sequence
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_PIC := true
+WITH_DEXPREOPT_COMP := false
