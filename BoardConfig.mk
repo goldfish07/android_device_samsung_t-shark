@@ -61,3 +61,7 @@ TARGET_BOARD_SUPPORT_HW_ADC_ADAPT := FUCK_YEAH #don't change string
 # RIL
 BOARD_RIL_CLASS += ../../../device/samsung/t-shark/ril
 COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
+
+# Bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/t-shark/bluetooth
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/t-shark/bluetooth/libbt_vndcfg.txt
