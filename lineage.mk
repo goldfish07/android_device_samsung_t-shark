@@ -15,7 +15,7 @@ TARGET_UNOFFICIAL_BUILD_ID := Judyann07@bertfish
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := t_shark
-PRODUCT_NAME := cm_t_shark
+PRODUCT_NAME := lineage_t_shark
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := t_shark
 PRODUCT_MANUFACTURER := samsung
