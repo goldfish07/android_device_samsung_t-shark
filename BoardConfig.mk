@@ -34,6 +34,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
+#Hardware Features#######################################################################
 #HW-Audio
 BOARD_USES_TINYALSA_AUDIO := true
 BOARD_USES_SS_VOIP := true
@@ -54,4 +55,7 @@ USE_OVERLAY_COMPOSER_GPU := true
 
 #SPRD-bluetooth
 BOARD_HAVE_BLUETOOTH_SPRD := true
-TARGET_BOARD_SUPPORT_HW_ADC_ADAPT := FUCK_YEAH
+TARGET_BOARD_SUPPORT_HW_ADC_ADAPT := FUCK_YEAH #don't change string
+###########################################################################################
+
+
