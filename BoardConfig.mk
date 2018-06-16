@@ -58,4 +58,6 @@ BOARD_HAVE_BLUETOOTH_SPRD := true
 TARGET_BOARD_SUPPORT_HW_ADC_ADAPT := FUCK_YEAH #don't change string
 ###########################################################################################
 
-
+# RIL
+BOARD_RIL_CLASS += ../../../device/samsung/t-shark/ril
+COMMON_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
