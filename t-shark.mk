@@ -47,6 +47,7 @@ PRODUCT_PACKAGES += \
 
 #OMX Codecs
 PRODUCT_PACKAGES += \
+	libstagefrighthw \
 	libstagefright_sprd_aacdec \
 	libstagefright_sprd_apedec \
 	libstagefright_soft_imaadpcmdec \
