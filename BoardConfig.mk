@@ -71,3 +71,8 @@ BOARD_BLUEDROID_VENDOR_CONF := device/samsung/t-shark/bluetooth/libbt_vndcfg.txt
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_PIC := true
 WITH_DEXPREOPT_COMP := false
+
+# Init
+TARGET_NR_SVC_SUPP_GIDS := 36
+TARGET_PROVIDES_INIT_RC := true
+TARGET_NEEDS_PROP_INIT_HACK := true
