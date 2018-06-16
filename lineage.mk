@@ -5,7 +5,13 @@ PRODUCT_RELEASE_NAME := t-shark
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/t-shark/device_t-shark.mk)
+$(call inherit-product, device/samsung/t-shark/t-shark.mk)
+
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/cm/config/telephony.mk)
+
+# Custom unofficial build tag
+TARGET_UNOFFICIAL_BUILD_ID := Judyann07@bertfish
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := t-shark
