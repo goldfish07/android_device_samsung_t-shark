@@ -81,15 +81,15 @@ PRODUCT_PACKAGES += \
 	libatchannel_wrapper \
 	libtinyalsa
 
-AUDIO_CONFIGS := \
+AUDIO := \
 	$(DEVICE_PATH)/configs/audio/audio_policy.conf \
 
 PRODUCT_COPY_FILES += \
-	$(foreach f,$(AUDIO_CONFIGS),$(f):system/etc/$(notdir $(f))) \
+	$(foreach f,$(AUDIO),$(f):system/etc/$(notdir $(f))) \
 
 
 # Media config
-MEDIA_CONFIGS := \
+MEDIA := \
 	$(DEVICE_PATH)/media/media_codecs.xml \
 	$(DEVICE_PATH)/media/media_profiles.xml \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml \
@@ -97,7 +97,7 @@ MEDIA_CONFIGS := \
 	frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml
 
 PRODUCT_COPY_FILES += \
-	$(foreach f,$(MEDIA_CONFIGS),$(f):system/etc/$(notdir $(f)))
+	$(foreach f,$(MEDIA),$(f):system/etc/$(notdir $(f)))
 
 
 # Wifi
@@ -107,19 +107,19 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant \
 	hostapd
 
-WIFI_CONFIGS := \
+WIFI := \
 	$(DEVICE_PATH)/configs/wifi/wpa_supplicant.conf \
 	$(DEVICE_PATH)/configs/wifi/nvram_net.txt
 
 PRODUCT_COPY_FILES += \
-	$(foreach f,$(WIFI_CONFIGS),$(f):system/etc/wifi/$(notdir $(f)))
+	$(foreach f,$(WIFI),$(f):system/etc/wifi/$(notdir $(f)))
 
 # GPS
-GPS_CONFIGS := \
+GPS := \
 	$(DEVICE_PATH)/configs/gps/gps.xml \
 
 PRODUCT_COPY_FILES += \
-	$(foreach f,$(GPS_CONFIGS),$(f):system/etc/$(notdir $(f)))
+	$(foreach f,$(GPS),$(f):system/etc/$(notdir $(f)))
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -129,6 +129,15 @@ PRODUCT_PACKAGES += \
 ####################################################################
 
 #Android Hardware Features #########################################
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+	setup_fs \
+	e2fsck \
+	f2fstat \
+	fsck.f2fs \
+	fibmap.f2fs \
+	mkfs.f2fs
 
 # Keylayout
 KEYLAYOUT := \
@@ -196,6 +205,17 @@ PRODUCT_PACKAGES += \
 	bluetooth.default \
 	audio.a2dp.default \
 	libbluetooth_jni
+
+# Bluetooth config
+BLUETOOTH := \
+	$(DEVICE_PATH)/configs/bluetooth/bt_vendor.conf
+
+PRODUCT_COPY_FILES += \
+$(foreach f,$(BLUETOOTH),$(f):system/etc/bluetooth/$(notdir $(f)))
+
+# USB interface
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	persist.sys.usb.config=mtp
 
 ####################################################################
 
