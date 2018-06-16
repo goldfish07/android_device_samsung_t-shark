@@ -17,7 +17,7 @@ function extract() {
         if [ ! -d $2/$DIR ]; then
             mkdir -p $2/$DIR
         fi
-        # Try CM target first
+        # Try lineage target first
         adb pull /system/$DEST $2/$DEST
         # if file does not exist try OEM target
         if [ "$?" != "0" ]; then
