@@ -59,6 +59,10 @@ TARGET_BOARD_SUPPORT_HW_ADC_ADAPT := FUCK_YEAH #don't change string
 # healthd
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.sc8830
 
+#samsung
+BOARD_USE_SAMSUNG_COLORFORMAT := true
+COMMON_GLOBAL_CFLAGS += -DSPRD_HARDWARE
+
 ###########################################################################################
 
 # RIL
@@ -107,3 +111,7 @@ WIFI_DRIVER_NVRAM_PATH_PARAM := "/sys/module/dhd/parameters/nvram_path"
 WIFI_DRIVER_NVRAM_PATH := "/system/etc/wifi/nvram_net.txt"
 WIFI_BAND := 802_11_ABG
 BOARD_HAVE_SAMSUNG_WIFI := true
+
+#lineage-hw
+BOARD_HARDWARE_CLASS := device/samsung/t-shark/lineage-hw
+###########################################################################################
