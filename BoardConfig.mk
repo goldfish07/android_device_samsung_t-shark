@@ -31,9 +31,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_LARGE_FILESYSTEM := true
-
-
-
+TARGET_NO_BOOTLOADER := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 #Hardware Features#######################################################################!
