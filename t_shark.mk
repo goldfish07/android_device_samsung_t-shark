@@ -31,7 +31,7 @@ ROOTDIR := \
 	$(DEVICE_PATH)/rootdir/init.kanas3g.rc \
 	$(DEVICE_PATH)/rootdir/init.kanas3g_base.rc \
 	$(DEVICE_PATH)/rootdir/init.wifi.rc \
-	$(DEVICE_PATH)/rootdir/init.swap.rc \
+	#$(DEVICE_PATH)/rootdir/init.swap.rc \
 
 PRODUCT_COPY_FILES += \
 	$(foreach f,$(ROOTDIR),$(f):root/$(notdir $(f)))
